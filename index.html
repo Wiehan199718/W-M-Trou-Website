@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steenkamp Troue</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Wiehan &amp Maryke Huweliks Bevestiging</h1>
+    </header>
+    <main>
+        <div>
+            <h2>Welkom by ons trou uitnodiging</h2>
+            <p>Hier is 'n paar besonderhede oor die groot dag.</p>
+        </div>
+
+        <div>
+            <h2>Datum en Tyd</h2>
+            <p>20 September 2025 om 17:00</p>
+        </div>
+
+        <div>
+            <h2>Plek</h2>
+            <p>Kleinevalleij Estate, Wellington</p>
+        </div>
+
+        <div>
+            <h2>Meer oor ons!</h2>
+            <p>Ons is opgewonde om ons liefde met julle te deel. Kom geniet die dag saam met ons!</p>
+        </div>
+
+        <div>
+            <h2>Fotos</h2>
+            <img src="images/wedding.jpg" alt="Troue Foto" style="width:100%; max-width:600px;">
+        </div>
+
+        <div class="rsvp">
+            <h2>RSVP</h2>
+            <p>Laat weet asseblief of julle die dag so samm met ons sal kan geniet!</p>
+            <form id="rsvp-form">
+                <label for="name">Jou Naam:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="attending">Sal jy kan kom?</label>
+                <select id="attending" name="attending">
+                    <option value="" disabled selected>Maak 'n keuse</option>
+                    <option value="yes">Ja</option>
+                    <option value="no">Nee</option>
+                </select><br>
+                <label for="email">Jou E-pos:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="family">Aantal gaste of familie wat saamkom:</label><br>
+                <textarea id="family" name="family" rows="4" cols="50"></textarea><br>
+                <label for="message">Enige spesiale dieet versoeke:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+                <button type="submit">Stuur</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Basic Website</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
