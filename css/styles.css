@@ -110,3 +110,7 @@ button:hover {
 button:checked {
     background: #e8491d;
 }
+
+#rsvp-form div {
+    border-bottom: none; /* Removes the bottom border for each div in the RSVP form */
+}

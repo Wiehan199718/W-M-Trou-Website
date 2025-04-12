@@ -40,20 +40,30 @@
             <h2>RSVP</h2>
             <p>Laat weet asseblief of julle die dag so samm met ons sal kan geniet!</p>
             <form id="rsvp-form">
-                <label for="name">Jou Naam:</label>
-                <input type="text" id="name" name="name" required><br>
-                <label for="attending">Sal jy kan kom?</label>
-                <select id="attending" name="attending">
-                    <option value="" disabled selected>Maak 'n keuse</option>
-                    <option value="yes">Ja</option>
-                    <option value="no">Nee</option>
-                </select><br>
-                <label for="email">Jou E-pos:</label>
-                <input type="email" id="email" name="email" required><br>
-                <label for="family">Aantal gaste of familie wat saamkom:</label><br>
-                <textarea id="family" name="family" rows="4" cols="50"></textarea><br>
-                <label for="message">Enige spesiale dieet versoeke:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+                <div>
+                    <label for="name">Jou Naam:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="attending">Sal jy kan kom?</label>
+                    <select id="attending" name="attending">
+                        <option value="" disabled selected>Maak 'n keuse</option>
+                        <option value="yes">Ja</option>
+                        <option value="no">Nee</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="email">Jou E-pos:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="family">Aantal gaste of familie wat saamkom:</label>
+                    <textarea id="family" name="family" rows="4" cols="50"></textarea>
+                </div>
+                <div>
+                    <label for="message">Enige spesiale dieet versoeke:</label>
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea>
+                </div>
                 <button type="submit">Stuur</button>
             </form>
         </div>
