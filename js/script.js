@@ -1,19 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("rsvp-form");
+    const attendingSelect = document.getElementById("attending");
+    const familyDiv = document.getElementById("family-div");
+    const messageDiv = document.getElementById("message-div");
+    const emailDiv = document.getElementById("email-div");
+
+    // Function to toggle visibility based on attending selection
+    const toggleVisibility = () => {
+        if (attendingSelect.value === "yes") {
+            familyDiv.style.display = "block";
+            messageDiv.style.display = "block";
+            emailDiv.style.display = "block";
+        } else {
+            familyDiv.style.display = "none";
+            messageDiv.style.display = "none";
+            emailDiv.style.display = "none";
+        }
+    };
+
+    // Initial check on page load
+    toggleVisibility();
+
+    // Add event listener to handle changes in the dropdown
+    attendingSelect.addEventListener("change", toggleVisibility);
 
     form.addEventListener("submit", (event) => {
         event.preventDefault(); // Prevent the default form submission behavior
 
         // Get form values
         const name = document.getElementById("name").value.trim();
-        const attending = document.getElementById("attending").value;
-
-        if (attending === "yes") {
-            document.getElementById("family").style.display = "block";
-            document.getElementById("message").style.display = "block";
-            document.getElementById("email").style.display = "block";
-        }
-
+        const attending = attendingSelect.value;
         const email = document.getElementById("email").value.trim();
         const family = document.getElementById("family").value.trim();
         const message = document.getElementById("message").value.trim();
@@ -37,5 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // Optionally, reset the form
         form.reset();
+        toggleVisibility(); // Reset visibility after form reset
     });
 });
