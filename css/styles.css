@@ -76,14 +76,24 @@ form {
     flex-direction: column;
 }
 
+/* Ensure consistent styling for all input fields and textareas */
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    width: 80%; /* Make the input and textarea take up the full width of their container */
+    padding: 10px; /* Add padding for better usability */
+    margin: 5px 0; /* Add spacing between elements */
+    border: 1px solid #ccc; /* Add a light border */
+    border-radius: 10px; /* Add rounded corners */
+    font-size: 16px; /* Set a consistent font size */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Include padding and border in the total width */
+}
+
+/* Additional styling for textareas */
+textarea {
+    height: 100px; /* Set a consistent height for textareas */
+    resize: vertical; /* Allow users to resize the textarea vertically only */
 }
 
 #attending {
