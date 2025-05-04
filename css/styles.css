@@ -125,3 +125,22 @@ button:checked {
 #rsvp-form div {
     border-bottom: none; /* Removes the bottom border for each div in the RSVP form */
 }
+
+.photo-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 15px; /* Add spacing between photos */
+    margin: 20px 0; /* Add spacing above and below the grid */
+}
+
+.photo-grid img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
