@@ -2,38 +2,38 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 main {
     padding: 20px;
-    background: #ffffff;
-    margin: 0 auto; /* Center the content horizontally */
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px; /* Set a maximum width for the content */
-    text-align: left; /* Ensure the text remains left-aligned */
+    background-color: #d7c2b8;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center; /* Center child elements horizontally */
 }
 
-div {
+section {
     margin-bottom: 20px;
-    border-bottom: #35424a 1px solid;
-    padding-bottom: 10px;
-}
-
-div:last-of-type {
-    border: none; /* Removes any border from the last <div> */
+    padding: 10px;
+    padding-left: 15px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%; /* Ensure divs take up the full width of their container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Keep the content inside the div left-aligned */
+    background-color: #ffffff; /* Set a white background for the section */
 }
 
 header {
-    background: #35424a;
+    background: linear-gradient(to right, #35424a, #e8491d); /* Blend two colors */
     color: #ffffff;
     padding: 100px 0;
     text-align: center;
 }
 
-h1 {
-    margin: 0;
+h1, h2, h3, h4, h5, h6 {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove any default padding */
 }
 
 nav {
@@ -50,7 +50,7 @@ nav a:hover {
     background: #e8491d;
 }
 
-.container {
+container {
     width: 80%;
     margin: auto;
     overflow: hidden;
@@ -64,10 +64,6 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-}
-
-.rsvp {
-    border: none; /* Removes the border for the RSVP block */
 }
 
 form {
@@ -120,10 +116,6 @@ button:hover {
 
 button:checked {
     background: #e8491d;
-}
-
-#rsvp-form div {
-    border-bottom: none; /* Removes the bottom border for each div in the RSVP form */
 }
 
 .photo-grid {
