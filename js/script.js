@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
         formMessage.className = 'form-message'; // Reset classes
 
         // **IMPORTANT: Replace this URL with your actual Google Apps Script Web App URL**
-        const googleAppsScriptUrl = 'https://script.google.com/macros/s/AKfycbzxbYiZr0uX4tBgCCf2-nyLJUHdw0B3YoCPi4yYUBT9Vt_w_E5vQbPJNJn3Z8XZJUfHnQ/exec';
+        const googleAppsScriptUrl = 'https://script.google.com/macros/s/AKfycbxaLWfr0lJpYPorsQjZhD9sOOWYxTd9UWthie1NjoGvKKSVOm5a91Mrhvz6_toUGKFyAg/exec';
 
         // Create a FormData object from the form
         const formData = new FormData(form);
