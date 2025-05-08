@@ -136,3 +136,22 @@ button:checked {
 .photo-grid img:hover {
     transform: scale(1.05); /* Slightly enlarge the image on hover */
 }
+
+/* Form Feedback Messages */
+.form-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+.form-message.success {
+    background-color: #d4edda; /* Light green */
+    color: #155724; /* Dark green */
+    border: 1px solid #c3e6cb;
+}
+.form-message.error {
+    background-color: #f8d7da; /* Light red */
+    color: #721c24; /* Dark red */
+    border: 1px solid #f5c6cb;
+}

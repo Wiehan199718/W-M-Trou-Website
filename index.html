@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steenkamp Troue</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Add this to your <head> in index.html to avoid 404 -->
+    <link rel="icon" href="data:,">
 </head>
 <body>
     <header>
@@ -74,7 +76,8 @@
                     <label for="message">Enige spesiale dieet versoeke:</label>
                     <textarea id="message" name="message" rows="4" cols="50"></textarea>
                 </div>
-                <button type="submit">Stuur</button>
+                <button type="submit" id="submit-button">Stuur</button>
+                <p id="form-message" class="form-message"></p>
             </form>
         </section>
     </main>
