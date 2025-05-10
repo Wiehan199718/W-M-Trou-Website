@@ -149,3 +149,16 @@ button:checked {
     color: #721c24; /* Dark red */
     border: 1px solid #f5c6cb;
 }
+
+/* Smooth transition for showing and hiding fields */
+.email-div, .family-div, .message-div {
+    transition: all 1s ease-in-out; /* Add a smooth transition */
+    opacity: 0; /* Start hidden */
+    max-height: 0; /* Collapse the height */
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+.email-div.show, .family-div.show, .message-div.show {
+    opacity: 1; /* Make visible */
+    max-height: 200px; /* Expand height (adjust as needed) */
+}

@@ -7,16 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const formMessage = document.getElementById('form-message');
     const submitButton = document.getElementById('submit-button');
 
-    // Function to toggle visibility based on attending selection
+    // Function to toggle visibility with smooth transition
     const toggleVisibility = () => {
         if (attendingSelect.value === "yes") {
-            familyDiv.style.display = "block";
-            messageDiv.style.display = "block";
-            emailDiv.style.display = "block";
+            emailDiv.classList.add("show");
+            familyDiv.classList.add("show");
+            messageDiv.classList.add("show");
         } else {
-            familyDiv.style.display = "none";
-            messageDiv.style.display = "none";
-            emailDiv.style.display = "none";
+            emailDiv.classList.remove("show");
+            familyDiv.classList.remove("show");
+            messageDiv.classList.remove("show");
         }
     };
 
@@ -53,9 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                     // Reset the form fields
                     form.reset();
-                    familyDiv.style.display = "none";
-                    messageDiv.style.display = "none";
-                    emailDiv.style.display = "none";
+                    emailDiv.classList.remove("show");
+                    familyDiv.classList.remove("show");
+                    messageDiv.classList.remove("show");
                     // Optionally, you can redirect the user or show a success message
                     submitButton.disabled = false;
                 })
