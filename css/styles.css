@@ -72,33 +72,46 @@ form {
     flex-direction: column;
 }
 
-/* Ensure consistent styling for all input fields and textareas */
+/* Apply consistent styling to all form elements */
 input[type="text"],
 input[type="email"],
+select,
 textarea {
-    width: 80%; /* Make the input and textarea take up the full width of their container */
-    padding: 10px; /* Add padding for better usability */
-    margin: 5px 0; /* Add spacing between elements */
-    border: 1px solid #ccc; /* Add a light border */
-    border-radius: 10px; /* Add rounded corners */
-    font-size: 16px; /* Set a consistent font size */
+    width: 100%;                /* Full width for easy readability */
+    padding: 12px;              /* Ample padding inside the fields */
+    margin: 8px 0;              /* Consistent vertical spacing */
+    border: 1px solid #ccc;     /* Use #ccc for a clean, consistent border color */
+    border-radius: 8px;         /* Rounded corners for a modern feel */
+    font-size: 16px;            /* Ensuring a readable font size */
     font-family: Arial, sans-serif;
-    box-sizing: border-box; /* Include padding and border in the total width */
+    box-sizing: border-box;     /* Include padding in the total width */
 }
 
-/* Additional styling for textareas */
-textarea {
-    height: 100px; /* Set a consistent height for textareas */
-    resize: vertical; /* Allow users to resize the textarea vertically only */
+/* Specific adjustments for Name and Email input boxes */
+#name-div input,
+#email-div input {
+    width: 70%;                /* Make the inputs smaller */
+    border: 1px solid #ccc;    /* Use the same border color as other inputs */
+    padding: 10px;             /* Maintain padding for good spacing */
+    border-radius: 10px;       /* Consistent rounded corners */
+    box-sizing: border-box;    /* Include padding and border in the width */
 }
 
+/* Override the select box (#attending) to ensure border color matches */
 #attending {
-    width: 30%;
     padding: 10px;
-    margin: 5px;
-    margin-left: 0px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;     /* Same as inputs */
+    border-radius: 8px;         
+    width: 30%;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Additional styling specific for textareas */
+textarea {
+    height: 120px;              /* A slightly taller textarea */
+    resize: vertical;           /* Allow vertical resize only */
 }
 
 button {
@@ -167,4 +180,63 @@ button:checked {
 .email-div.show, .family-div.show, .message-div.show {
     opacity: 1; /* Make visible */
     max-height: 200px; /* Expand height (adjust as needed) */
+}
+
+/* Mobile responsiveness for devices with max-width 600px */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+  
+    header {
+        padding: 50px 0;
+    }
+  
+    header h1 {
+        font-size: 2em;
+    }
+  
+    header h3 {
+        font-size: 1.2em;
+    }
+  
+    main {
+        padding: 10px;
+    }
+  
+    section {
+        padding: 10px 5px;
+        max-width: 100%;
+    }
+  
+    /* Make input fields, textareas, and selects use full width on smaller screens */
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+        width: 100%;
+    }
+
+    #name-div input,
+    #email-div input {
+         width: 70%;
+    }
+  
+    /* Adjust the selection box specifically */
+    #attending {
+        width: 70%;
+        padding: 10px;
+        margin: 5px 0;
+    }
+  
+    /* Adjust grid columns for photos */
+    .photo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        margin: 10px 0;
+    }
+  
+    .photo-grid img {
+        border-radius: 5px;
+    }
 }
