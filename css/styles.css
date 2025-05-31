@@ -193,8 +193,27 @@ button:checked {
     max-height: 200px; /* Expand height (adjust as needed) */
 }
 
+.invitation {
+    font-size: 1.1em; /* Slightly larger font for the invitation text */
+    margin: 20px 0; /* Add spacing above and below the invitation text */
+    text-align: center; /* Center the invitation text */
+}
+
+.invitation h2 {
+    font-family: 'elegant', serif; /* Use a serif font for the invitation title */
+    margin-bottom: 10px; /* Add spacing below the title */
+}
+
+.invitation p {
+    margin: 25px 0;
+}
+
 /* Mobile responsiveness for devices with max-width 600px */
 @media screen and (max-width: 600px) {
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
     body {
         padding: 5px;
     }
