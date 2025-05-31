@@ -4,6 +4,11 @@ body {
     padding: 0;
 }
 
+html {
+    margin: 0;
+    padding: 0;
+}
+
 main {
     padding: 20px;
     background-color: #d7c2b8;
@@ -25,16 +30,21 @@ section {
 }
 
 header {
-    background: linear-gradient(to right, #35424a, #e8491d); /* Blend two colors */
-    color: #ffffff;
-    padding: 100px 0;
+    background-image: url("../Fotos/WhatsApp Image 2025-02-08 at 21.13.11_e783a12b.jpg"), url("../Fotos/WhatsApp Image 2025-02-08 at 21.13.12_3e978242.jpg"), url("../Fotos/WhatsApp Image 2025-02-08 at 21.13.13_1f0c2b3a.jpg");
+    background-size: 33.33% 100%, 33.33% 100%, 33.33% 100%; /* Adjusted to ensure each image takes up one-third of the header */
+    background-position: left center, center center, right center;
+    background-repeat: no-repeat, no-repeat, no-repeat; /* Ensure no repetition of images */
+    background-color: rgba(255, 255, 255, 0.3); /* white overlay for faded effect */
+    background-blend-mode: lighten; /* blend mode to achieve faded images */
+    min-height: 55vh; /* increased vertical size */
     text-align: center;
+    align-content: center;
 }
 
 header h1 {
     font-size: 3em; /* Increase the font size for the main title */
     font-family: 'Times New Roman', serif; /* Use a serif font for the title */	
-    margin: 10px;
+    margin: 0 0 10px 0; /* Remove top margin to eliminate white strip */
 }
 
 h1, h2, h3, h4, h5, h6 {
