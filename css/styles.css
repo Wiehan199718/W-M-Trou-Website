@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: rgb(95, 74, 51);
 }
 
 html {
@@ -11,7 +12,13 @@ html {
 
 main {
     padding: 20px;
-    background-color: #d7c2b8;
+    background-image: url("../Background_Photos/istockphoto-1294181713-612x612\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Makes the background fixed while scrolling */
+    image-rendering: -webkit-optimize-contrast; /* Improve sharpness on webkit browsers */
+    image-rendering: crisp-edges; /* Improve overall image crispness */
+    -webkit-font-smoothing: antialiased; /* Smoother text rendering */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack child elements vertically */
     align-items: center; /* Center child elements horizontally */
@@ -26,7 +33,7 @@ section {
     width: 100%; /* Ensure divs take up the full width of their container */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left; /* Keep the content inside the div left-aligned */
-    background-color: #ffffff; /* Set a white background for the section */
+    background-color: #d7f9df; /* Set a white background for the section */
 }
 
 
@@ -53,22 +60,22 @@ header {
 
 header h1 {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(95, 74, 51);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-size: 3em; /* Increase the font size for the main title */
+    font-size: 4em; /* Increase the font size for the main title */
     font-family: 'Times New Roman', serif; /* Use a serif font for the title */	
     margin: 0 0 10px 0; /* Remove top margin to eliminate white strip */
     z-index: 2; /* Ensure text stays on top */
     width: 100%; /* Full width for better centering */
-    text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0; /* Remove default margins */
     padding: 0; /* Remove any default padding */
+    color: rgb(95, 74, 51);
 }
 
 nav {
