@@ -103,7 +103,6 @@ form {
 
 /* Apply consistent styling to all form elements */
 input[type="text"],
-input[type="email"],
 select,
 textarea {
     width: 100%;                /* Full width for easy readability */
@@ -117,8 +116,7 @@ textarea {
 }
 
 /* Specific adjustments for Name and Email input boxes */
-#name-div input,
-#email-div input {
+#name-div input {
     width: 70%;                /* Make the inputs smaller */
     border: 1px solid #ccc;    /* Use the same border color as other inputs */
     padding: 10px;             /* Maintain padding for good spacing */
@@ -200,14 +198,14 @@ button:checked {
 }
 
 /* Smooth transition for showing and hiding fields */
-.email-div, .family-div, .message-div {
+.message-div {
     transition: all 1s ease-in-out; /* Add a smooth transition */
     opacity: 0; /* Start hidden */
     max-height: 0; /* Collapse the height */
     overflow: hidden; /* Prevent content from overflowing */
 }
 
-.email-div.show, .family-div.show, .message-div.show {
+.message-div.show {
     opacity: 1; /* Make visible */
     max-height: 200px; /* Expand height (adjust as needed) */
 }
@@ -283,14 +281,12 @@ iframe {
   
     /* Make input fields, textareas, and selects use full width on smaller screens */
     input[type="text"],
-    input[type="email"],
     textarea,
     select {
         width: 100%;
     }
 
-    #name-div input,
-    #email-div input {
+    #name-div input {
          width: 70%;
     }
   

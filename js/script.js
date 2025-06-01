@@ -1,21 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("rsvp-form");
     const attendingSelect = document.getElementById("attending");
-    const familyDiv = document.getElementById("family-div");
     const messageDiv = document.getElementById("message-div");
-    const emailDiv = document.getElementById("email-div");
     const formMessage = document.getElementById('form-message');
     const submitButton = document.getElementById('submit-button');
 
     // Function to toggle visibility with smooth transition
     const toggleVisibility = () => {
         if (attendingSelect.value === "yes") {
-            emailDiv.classList.add("show");
-            familyDiv.classList.add("show");
             messageDiv.classList.add("show");
         } else {
-            emailDiv.classList.remove("show");
-            familyDiv.classList.remove("show");
             messageDiv.classList.remove("show");
         }
     };
@@ -53,8 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                     // Reset the form fields
                     form.reset();
-                    emailDiv.classList.remove("show");
-                    familyDiv.classList.remove("show");
                     messageDiv.classList.remove("show");
                     // Optionally, you can redirect the user or show a success message
                     submitButton.disabled = false;
