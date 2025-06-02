@@ -29,7 +29,7 @@ section {
     padding: 10px;
     padding-left: 15px;
     border-radius: 10px;
-    max-width: 800px;
+    max-width: 850px;
     width: 100%; /* Ensure divs take up the full width of their container */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left; /* Keep the content inside the div left-aligned */
@@ -167,22 +167,25 @@ button:checked {
 
 .photo-grid {
     display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
     gap: 15px; /* Add spacing between photos */
     margin: 20px 0; /* Add spacing above and below the grid */
 }
 
 .photo-grid img {
     width: 100%;
-    height: 200px; /* fixed height for uniform display */
+    height: 350px; /* Increased height for better portrait display */
     object-fit: cover; /* crop image to fill the fixed area */
+    object-position: center 30%; /* Position slightly above center to better frame faces */
     border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    transition: transform 0.3s ease; /* Add a hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transition: all 0.3s ease; /* Add a hover effect */
+    cursor: pointer;
 }
 
 .photo-grid img:hover {
     transform: scale(1.05); /* Slightly enlarge the image on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Form Feedback Messages */
@@ -242,6 +245,85 @@ iframe {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 16px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1001;
+}
+
+.lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-nav.prev {
+    left: 20px;
+}
+
+.lightbox-nav.next {
+    right: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .lightbox-nav {
+        padding: 12px;
+        font-size: 20px;
+    }
+    
+    .lightbox-close {
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+    }
+}
+
 /* Mobile responsiveness for devices with max-width 600px */
 @media screen and (max-width: 600px) {
     body, html {
@@ -271,6 +353,7 @@ iframe {
     header h1 {
         font-size: 2.5em; /* Slightly smaller on mobile */
         width: 90%; /* Prevent text from touching edges */
+        top: 60%; /* Adjust position for smaller screens */
     }
   
     header h3 {
